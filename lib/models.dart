@@ -1,4 +1,4 @@
-// Data models for Garagio. Dates are stored as ISO-8601 strings (yyyy-MM-dd).
+// Data models for Vehnexis. Dates are stored as ISO-8601 strings (yyyy-MM-dd).
 
 DateTime? parseDate(Object? v) =>
     (v == null || v == '') ? null : DateTime.tryParse(v.toString());

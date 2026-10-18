@@ -117,7 +117,7 @@ class Notifier {
           await _plugin.zonedSchedule(
             id++,
             '${r.vehicleName}: ${r.title} $when',
-            'Open Garagio to see details.',
+            'Open Vehnexis to see details.',
             tz.TZDateTime.from(at.toUtc(), tz.UTC),
             _details,
             androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,

@@ -61,7 +61,7 @@ class _GarageScreenState extends State<GarageScreen> {
               if (vs.isEmpty) {
                 return sold
                     ? const EmptyState(emoji: '🗂️', title: 'No past vehicles', message: 'When you sell a vehicle, mark it as sold and its full history stays here.')
-                    : const EmptyState(emoji: '🚗', title: 'Your garage is empty', message: 'Add your first car or bike. Snap the registration card and Garagio fills in the details.');
+                    : const EmptyState(emoji: '🚗', title: 'Your garage is empty', message: 'Add your first car or bike. Snap the registration card and Vehnexis fills in the details.');
               }
               return ListView.builder(
                 padding: const EdgeInsets.fromLTRB(12, 12, 12, 96),

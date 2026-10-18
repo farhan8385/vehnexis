@@ -28,7 +28,7 @@ jobs:
       - name: Generate Android platform files
         run: |
           flutter --version
-          flutter create --platforms=android --org com.garagio --project-name garagio .
+          flutter create --platforms=android --org com.vehnexis --project-name vehnexis .
           rm -f test/widget_test.dart
           python3 tool/patch_android.py
 
@@ -49,14 +49,14 @@ jobs:
       - name: Rename APK
         run: |
           VERSION=$(grep '^version:' pubspec.yaml | awk '{print $2}' | cut -d+ -f1)
-          cp build/app/outputs/flutter-apk/app-release.apk "garagio-${VERSION}-build${GITHUB_RUN_NUMBER}.apk"
+          cp build/app/outputs/flutter-apk/app-release.apk "vehnexis-${VERSION}-build${GITHUB_RUN_NUMBER}.apk"
           ls -la *.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: garagio-apk
-          path: garagio-*.apk
+          name: vehnexis-apk
+          path: vehnexis-*.apk
 
       - name: Publish as "Latest test build" release
         uses: softprops/action-gh-release@v2
@@ -64,7 +64,7 @@ jobs:
           tag_name: test-build-${{ github.run_number }}
           name: Test build ${{ github.run_number }}
           prerelease: true
-          files: garagio-*.apk
+          files: vehnexis-*.apk
           body: |
             Android test build from commit ${{ github.sha }}.
             Download the .apk on your phone and open it to install (allow "Install unknown apps" when asked).

@@ -111,7 +111,7 @@ class _ServiceFormScreenState extends State<ServiceFormScreen> {
             child: ListView(shrinkWrap: true, padding: const EdgeInsets.all(16), children: [
               Text('Are these parts under warranty?', style: Theme.of(c).textTheme.titleLarge),
               const SizedBox(height: 4),
-              const Text('Pick how long each warranty lasts. Garagio reminds you before it ends.'),
+              const Text('Pick how long each warranty lasts. Vehnexis reminds you before it ends.'),
               const SizedBox(height: 12),
               for (final p in pending) ...[
                 Text(p.name.text, style: const TextStyle(fontWeight: FontWeight.w600)),

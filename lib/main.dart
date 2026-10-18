@@ -8,11 +8,11 @@ import 'services.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Notifier.init();
-  runApp(const GaragioApp());
+  runApp(const VehnexisApp());
 }
 
-class GaragioApp extends StatelessWidget {
-  const GaragioApp({super.key});
+class VehnexisApp extends StatelessWidget {
+  const VehnexisApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class GaragioApp extends StatelessWidget {
           inputDecorationTheme: const InputDecorationTheme(isDense: true),
         );
     return MaterialApp(
-      title: 'Garagio',
+      title: 'Vehnexis',
       debugShowCheckedModeBanner: false,
       theme: theme(Brightness.light),
       darkTheme: theme(Brightness.dark),

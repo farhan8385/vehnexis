@@ -313,7 +313,7 @@ class _ServicesTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (d.services.isEmpty) {
-      return const EmptyState(emoji: '🔧', title: 'No services yet', message: 'Add a service and snap the garage invoice. Garagio reads the date, km, cost and parts.');
+      return const EmptyState(emoji: '🔧', title: 'No services yet', message: 'Add a service and snap the garage invoice. Vehnexis reads the date, km, cost and parts.');
     }
     final cur = d.vehicle.currency;
     return ListView.separated(

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:garagio/scan_parser.dart';
+import 'package:vehnexis/scan_parser.dart';
 
 void main() {
   test('reads a registration card', () {

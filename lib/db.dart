@@ -14,7 +14,7 @@ class AppDb {
   Future<Database> _open() async {
     final dir = await getDatabasesPath();
     return openDatabase(
-      p.join(dir, 'garagio.db'),
+      p.join(dir, 'vehnexis.db'),
       version: 1,
       onConfigure: (db) => db.execute('PRAGMA foreign_keys = ON'),
       onCreate: (db, v) async {

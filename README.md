@@ -1,4 +1,4 @@
-# Garagio (working name) — Android test build
+# Vehnexis — Android test build
 
 Keep every car and bike's papers, services, warranties and costs in one place.
 Snap the registration card or garage invoice and the details fill in automatically.
@@ -8,7 +8,7 @@ Snap the registration card or garage invoice and the details fill in automatical
 Every push to `main` builds a signed APK on GitHub:
 
 1. Open the repository on GitHub → **Releases** → newest **Test build N** → download the `.apk`
-   (or **Actions** → latest run → **Artifacts** → `garagio-apk`).
+   (or **Actions** → latest run → **Artifacts** → `vehnexis-apk`).
 2. Open the file on an Android phone (Android 6.0 or newer) and allow "Install unknown apps" when asked.
 3. Later builds install over the old one and keep your data, because every build uses the same test key.
 
@@ -48,13 +48,13 @@ android/app/             test signing key + ProGuard rules (rest is generated in
 ## Build on your own PC instead
 
 ```
-flutter create --platforms=android --org com.garagio --project-name garagio .
+flutter create --platforms=android --org com.vehnexis --project-name vehnexis .
 python3 tool/patch_android.py
 flutter run
 ```
 
 ## Before publishing to Google Play
 
-- `android/app/garagio-test.jks` is a **test key only**. Create a private upload key, keep it out of the repository, and enrol in Play App Signing.
-- Choose the final app name and package ID (currently `com.garagio.garagio`); the package ID cannot change after the first Play Store upload.
+- `android/app/vehnexis-test.jks` is a **test key only**. Create a private upload key, keep it out of the repository, and enrol in Play App Signing.
+- The package ID is `com.vehnexis.app`; it cannot change after the first Play Store upload, so confirm it before publishing.
 - Add a privacy policy: the app stores photos of registration cards, which contain personal data.
